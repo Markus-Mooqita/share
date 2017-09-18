@@ -1,0 +1,93 @@
+<!------------------------------------------------
+|
+| Layout templates
+|
+-------------------------------------------------->
+<template name="alpha_ideas" xmlns="http://www.w3.org/1999/html">
+	{{#unless currentUser}}
+		{{>alpha_login}}
+	{{else}}
+		<div class="wrapper">
+			<div class="alpha-layout">
+				<header>
+					{{> menu}}
+				</header>
+
+				<main>
+					{{> sAlert}}
+					{{> ideas}}
+				</main>
+			</div>
+		</div>
+	{{/unless}}
+</template>
+
+
+<template name="ideas">
+	{{#wide_spacing}}
+		<div class="item padding-top">
+			<div class="padding-next">
+				<div class="btn-toolbar" role="toolbar">
+					<div class="btn-group">
+						<button class="btn btn-theme" id="add_idea" type="button">
+							New Idea
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" style="margin-bottom: 25px">
+				<div class="col-sm-6">
+					<div class="input-group">
+						<input placeholder="Search for challenges" id="query"
+								 class="form-control edit-field"/>
+						<span class="input-group-btn">
+
+							<button class="btn btn-theme" type="button" id="search">
+								<span class="glyphicon glyphicon-search"></span>
+							</button>
+						</span>
+					</div>
+				</div>
+
+				<div class="col-sm-6">
+					{{>paging subscription="ideas" page=0 count=10 parameter=parameter}}
+				</div>
+			</div>
+
+			{{#unless Template.subscriptionsReady}}
+				{{>wait}}
+			{{else}}
+				{{#each ideas}}
+						{{>idea_preview}}
+					{{else}}
+						<h2><em>No ideas yet. What, seriously?</em></h2>
+					{{/each}}
+			{{/unless}}
+		</div>
+	{{/wide_spacing}}
+</template>
+
+
+<template name="idea_preview">
+	<h1 class="editable">
+		{{>basic_input method="set_field" collection_name="Ideas"
+		item_id=_id field="title" placeholder="Title of your Idea"}}
+	</h1>
+
+	<div class="editable">
+		{{>text_input method="set_field" collection_name="Ideas"
+		item_id=_id field="content" placeholder="What is it all about?"}}
+	</div>
+</template>
+
+
+<template name="wide_spacing">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+				{{> UI.contentBlock}}
+			</div>
+		</div>
+	</div>
+</template>

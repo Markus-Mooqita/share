@@ -1,0 +1,97 @@
+////////////////////////////////////////////////
+@import "{}/client/style/_color.scss";
+@import "{}/client/style/_fonts.scss";
+
+///////////////////////////////////////////////
+// Nav bar elements
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.menu-container{
+	border-bottom: 2px solid $theme;
+}
+
+.navbar {
+	padding-bottom: 0px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.navbar-brand {
+	padding: 5px 0px 0px 0px;
+}
+
+.navbar a{
+	font-size: 1.5em;
+	font-weight: 300;
+	color: $theme;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus{
+	color: $text-on-theme;
+	background: $theme;
+}
+
+.navbar .active .btn{
+	color: $text-on-theme;
+	background: $theme;
+}
+
+.navbar .active .btn:hover{
+	padding: 16px 14px 14px 16px;
+}
+
+.navbar-toggle {
+	margin-top: 12px;
+	border: 2px solid $theme;
+}
+
+.navbar-toggle:hover{
+	padding: 9px 9px 9px 11px;
+
+  -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .5);
+          box-shadow: inset 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+.navbar-toggle .icon-bar{
+	background: $theme;
+}
+
+
+////////////////////////////////////////////////
+// Menu navigation
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.navigation-background{
+	padding: 15px;
+	padding-left: 35px;
+}
+
+.navigation-background .credit-score{
+	font-size: 20px;
+	margin-right: 25px
+}
+
+.navigation-background .control-navigate{
+	font-size: 20px;
+}
+
+.navigation-button{
+	color: #eee;
+	padding: 15px;
+	margin: 5px;
+	font-style: normal;
+	text-decoration: none;
+}
+
+.navigation-button:hover{
+	color: $contrast-on-theme;
+	padding: 15px;
+	margin: 5px;
+	font-style: normal;
+	text-decoration: none;
+	cursor: pointer;
+}
+

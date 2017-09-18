@@ -1,0 +1,48 @@
+<template name="upload">
+  <div class="dropcontainer">
+		<form id="dropbox_{{box_id}}" class="dropbox {{upload_style}}"
+					method="post" action="" enctype="multipart/form-data">
+			<div class="dropbox__input">
+				{{#unless mini}}
+					<div class="glyphicon glyphicon-cloud-upload dropbox__icon" aria-hidden="true"></div>
+
+					<input class="dropbox__file" type="file" name="files[]"
+								 id="file" data-multiple-caption="{count} files selected" multiple />
+
+					<label for="file">
+						<em>Choose a file</em>
+						<span class="dropbox__dragndrop"> or drag it here</span>.
+					</label>
+
+					<button class="dropbox__button" type="submit">Upload</button>
+				{{else}}
+					<input class="dropbox__file" type="file" name="files[]"
+								 id="file" data-multiple-caption="{count} files selected" multiple />
+
+					<label for="file">
+						Drop file.
+					</label>
+				{{/unless}}
+			</div>
+
+			{{#if uploaded}}
+				<p style="padding-bottom: 15px">
+					File: {{uploaded.name}} uploaded.
+				</p>
+			{{/if}}
+
+			<div class="dropbox__uploading">
+				Uploading
+				<span class="glyphicon glyphicon-refresh spin"></span>
+			</div>
+
+			<div class="dropbox__success">Done!</div>
+
+			<div class="dropbox__error">
+				Error!
+				<a id="restart" class="dropbox__restart" role="button">Try again!</a>
+			</div>
+		</form>
+  </div>
+</template>
+

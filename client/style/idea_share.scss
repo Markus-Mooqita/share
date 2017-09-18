@@ -1,0 +1,298 @@
+///////////////////////////////////////////////
+// colors
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+@import "{}/client/style/_color.scss";
+@import "{}/client/style/_fonts.scss";
+
+////////////////////////////////////////////////
+//
+// alpha
+//
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+// alpha layout
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.alpha-layout{
+}
+
+.alpha-layout p{
+}
+
+////////////////////////////////////////////////
+// Misc
+////////////////////////////////////////////////
+.alpha-layout .indent_l1{
+	margin-left: 45px;
+}
+
+.alpha-layout .padding-next{
+	padding-bottom: 25px;
+}
+
+////////////////////////////////////////////////
+// header
+////////////////////////////////////////////////
+.alpha-layout h1{
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+.alpha-layout h1{
+	margin: 45px 0 0 0;
+	padding: 0 0 15px 0;
+}
+
+.alpha-layout h1:first-child{
+	margin: 0;
+}
+
+.alpha-layout h2{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+.alpha-layout h2 a{
+	color: $theme;
+}
+
+.alpha-layout h2 a:hover{
+	color: $contrast-on-theme;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+////////////////////////////////////////////////
+// paragraphs
+////////////////////////////////////////////////
+.alpha-layout p.user-data{
+	white-space: pre-wrap;       /* Since CSS 2.1 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+	margin-bottom: 25px;
+}
+
+////////////////////////////////////////////////
+// forms
+////////////////////////////////////////////////
+.alpha-layout .form-control{
+	border: 2px solid #ddd;
+	min-height: 40.5px;
+	font-size: 16px;
+}
+
+.alpha-layout .editable .form-control{
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	background: none;
+	font: inherit;
+//	border: inherit;
+	text-align: inherit;
+	color: inherit;
+	display: initial;
+	height: 100%;
+//	padding: 0px;
+	margin-bottom: -2px;
+}
+
+.alpha-line{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	border-top-color: $theme;
+	border-top-width: 3px;
+	width: 25%;
+}
+
+////////////////////////////////////////////////
+// itemized an item encompasses other elements
+// with a border
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.alpha-layout .row-line-left{
+	border-left: solid;
+	border-color: $theme-light;
+	border-width: 2px;
+	border-radius: 20px;
+}
+
+.alpha-layout .item {
+	border: 2px solid #ddd;
+	padding: 25px;
+	margin: 0 0 25px 0;
+}
+
+.alpha-layout .item.padding-top{
+	margin-top: 35px;
+}
+
+.alpha-layout .item h1{
+	margin: 0;
+	padding: 0 0 20px 0;
+}
+
+.alpha-layout .item h1{
+	margin: 45px 0 0 0;
+	padding: 0 0 15px 0;
+}
+
+.alpha-layout .item h1:first-child{
+	margin: 0;
+}
+
+.alpha-layout .item h2{
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 25px;
+}
+
+a.alpha,
+.alpha-layout .item h2 a{
+	color: $theme;
+}
+
+a.alpha:hover,
+.alpha-layout .item h2 a:hover{
+	color: $contrast-on-theme;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.alpha-layout .item .media-body{
+	padding-left: 20px;
+}
+
+.alpha-layout .item .media-body h2{
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+
+.alpha-layout .item hr {
+	margin-bottom: 30px;
+}
+
+.alpha-layout .item .rating_line{
+	padding: 0px 0px 20px 0px;
+	text-align: right;
+}
+
+.alpha-layout .item .wide_link{
+	padding-top: 15px;
+	text-align: center;
+}
+
+.alpha-layout .item .edit-toggle{
+	color: $theme;
+}
+
+.alpha-layout .item .edit-toggle:hover{
+	color: $theme;
+}
+
+////////////////////////////////////////////////
+// occpuation selection
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.alpha-layout .select-occupation{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.alpha-layout .select-occupation .item:hover{
+	border-color: $theme;
+}
+
+.alpha-layout .select-occupation .glyphicon{
+	font-size: 2em;
+	color: $theme;
+}
+
+.alpha-layout .select-occupation.select-disabled .item,
+.alpha-layout .select-occupation.select-disabled .item:hover,
+.alpha-layout .select-occupation.select-disabled .glyphicon{
+	border-color: #ddd;
+	color: #ddd;
+}
+
+.alpha-layout .select-occupation label{
+	font-size: 1.5em;
+	font-weight: 300;
+	text-align: center;
+}
+
+////////////////////////////////////////////////
+// footer
+////////////////////////////////////////////////
+.alpha-layout footer h1, .h1{
+	color: $text-on-theme;
+}
+
+.alpha-layout footer h1:first-child,
+.alpha-layout footer .h1:first-child{
+	margin-top: 25px;
+	margin-bottom: 15px;
+	padding: 0px;
+}
+
+.alpha-layout footer a{
+	font-size: 18px;
+	color: $contrast-on-theme;
+}
+
+.alpha-layout footer a:hover{
+	color: $contrast-on-theme-dark;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.alpha-layout footer hr,
+.alpha-layout footer .hr{
+	border-top: 2px solid $contrast-on-theme;
+	width: 25%;
+}
+
+////////////////////////////////////////////////
+// landing page hero
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+.padding-top{
+	padding-top: 50px;
+}
+
+////////////////////////////////////////////////
+.alpha-layout .hero {
+	background-repeat: repeat, no-repeat;
+	background-size: auto auto, cover;
+	background-position: 0 0, top center;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: absolute;
+	min-height: 350px;
+	bottom: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+.alpha-layout .hero h1 {
+	color: #fff;
+	max-width: 650px;
+	font-size: 50px;
+	font-weight: 300;
+	text-align: center;
+}
+
+.alpha-layout .hero-background{
+	background-image: linear-gradient($theme-light, $theme);
+}
+
